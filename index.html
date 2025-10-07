@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Salgados da Vilma</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="div-logo">
+            <img src="./assets/logo-without-background.png" alt="logomarca-salgados-da-vilma" class="logomarca">
+        </div>
+
+        <nav>
+            <div class="nav-item">
+                <a href="#home">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="#products">Produtos</a>
+            </div>
+            <div class="nav-item">
+                <a href="#about">Sobre</a>
+            </div>
+            <div class="nav-item">
+                <a href="#contact">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="background-img-mask">
+            <img src="./assets/background.webp" alt="background-salgados" class="background-img">
+        </div>
+
+        <div class="main-content">
+            <section id="home" class="section-home">
+                <h1>Salgados da Vilma</h1>
+                <h2>Os melhores salgados da região!<br>Faça já sua encomenda!</h2>
+            </section>
+        </div>
+
+        <section class="home-info">
+            <div class="txt-conteiner" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                <p>
+                    Há mais de 30 anos, Vilma transforma sua paixão pela cozinha em momentos deliciosos. <br>
+                    O que começou com
+                    pequenas encomendas para amigos e vizinhos virou uma tradição: salgados feitos com amor, receitas de
+                    família e aquele sabor caseiro que conquista qualquer festa. <br>
+                    Hoje, os Salgados da Vilma são sinônimo de
+                    qualidade e carinho em cada mordida!
+                </p>
+            </div>
+        </section>
+
+        <section class="container-cards">
+            <div class="card" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/coxinhas.webp" alt="coxinhas">
+                <h3 class="product-name">Mini-Coxinha</h3>
+                <p class="product-description">R$ 30,00<br>100 un.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-duration="700" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/empadinhas.webp" alt="empadinhas">
+                <h3 class="product-name">Mini-Empada</h3>
+                <p class="product-description">R$ 42,50<br>100 un.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/quibes.webp" alt="quibes">
+                <h3 class="product-name">Mini-Quibe</h3>
+                <p class="product-description">R$ 33,00<br>100 un.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/bolinha-de-queijo.webp" alt="bolinha-de-queijo">
+                <h3 class="product-name">Bolinha de Queijo</h3>
+                <p class="product-description">R$ 27,50<br>100 un.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-duration="700" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/enroladinho-de-salsicha.webp" alt="enroladinho-de-salsicha">
+                <h3 class="product-name">Enroladinho de Salsicha</h3>
+                <p class="product-description">R$ 25,00<br>100 un.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/mini-pastel.webp" alt="mini-pastel">
+                <h3 class="product-name">Pasteizinhos</h3>
+                <p class="product-description">R$ 32,00<br>100 un.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/bolinho-de-bacalhau.webp" alt="bolinho-de-bacalhau">
+                <h3 class="product-name">Bolinho de Bacalhau</h3>
+                <p class="product-description">R$ 45,50<br>100 un.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-duration="700" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/mini-esfiha.webp" alt="mini-esfiha">
+                <h3 class="product-name">Mini-Esfiha</h3>
+                <p class="product-description">R$ 125,00<br>100 un.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+                <img class="products" src="./assets/cento.webp" alt="cento">
+                <h3 class="product-name">Cento</h3>
+                <p class="product-description">R$ 35,00 - R$ 90,00<br>Consulte condições*</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="info">
+
+        <form data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+            Fale conosco
+            <label for="name">
+                Nome:
+                <input name="name" type="text" placeholder="Ex.: Ana Maria">
+            </label>
+            <label for="email">
+                E-mail:
+                <input name="email" type="email" placeholder="contato@email.com">
+            </label>
+            <label for="tel">
+                Telefone:
+                <input name="tel" type="number" placeholder="(99)99999-9999">
+            </label>
+            <label for="info">
+                Insira aqui sua mensagem:
+                <textarea name="info" placeholder="Sua mensagem aqui..."></textarea>
+            </label>
+            <button class="send-button">Enviar</button>
+
+        </form>
+        <div class="contact-links">
+
+            <img class="contact-icon" src="./assets/whatsapp-logo.png" alt="whatsapp-logo">
+
+            <img class="contact-icon" src="./assets/instagram-logo.png" alt="instagram-logo">
+
+            <img class="contact-icon" src="./assets/telefone-logo.png" alt="telefone">
+
+        </div>
+
+        <div class="cop-info">
+            <p>
+                Salgados da Vilma LTDA - CNPJ: 00.000.000/0000-00 <br>
+                Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+<script>
+    AOS.init();
+</script>
+
+</html>

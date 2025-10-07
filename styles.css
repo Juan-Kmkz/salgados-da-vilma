@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: rgb(255, 248, 240);
+  /* position: fixed; */
+}
+
+.logomarca {
+  width: 10rem;
+  height: auto;
+  margin: 5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.nav-item {
+  background-color: #633a21;
+  padding: 5px 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+nav a {
+  font-family: "Leckerli One", cursive;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.background-img-mask {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  background: radial-gradient(circle, rgba(255, 248, 240, 1) 0%, rgba(231, 111, 81, 1) 77%);
+  position: absolute;
+  z-index: -1;
+}
+
+.background-img {
+  width: 100vw;
+  height: 100%;
+  opacity: .5;
+  position: relative;
+  z-index: -2;
+}
+
+.main-content {
+  width: 100%;
+  height: 57rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-info {
+  width: 100%;
+  height: 400px;
+  background-color: #5e3822;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.txt-conteiner {
+  background-color: rgb(255, 248, 240);
+  color: #5e3822;
+  max-width: 70%;
+  height: 70%;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.section-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+h1 {
+  font-family: "Leckerli One", cursive;
+  font-size: 6rem;
+  color: #5e3822;
+}
+
+h2 {
+  text-align: center;
+  color: #5e3822;
+  font-size: 1.5rem;
+}
+
+.container-cards {
+  width: 100%;
+  background-color: rgb(255, 248, 240);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  justify-items: center;
+  padding: 50px;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.products {
+  width: 85%;
+  border-radius: 30px;
+}
+
+.product-name {
+  font-family: "Leckerli One", cursive;
+  color: #5e3822;
+  font-size: 2rem;
+}
+
+.product-description {
+  text-align: center;
+  color: #5e3822;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #5e3822;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: rgb(255, 248, 240);
+  font-family: "Leckerli One", cursive;
+  max-width: 600px;
+  border-radius: 30px;
+  padding: 30px 50px;
+  font-size: 2rem;
+  color: #5e3822;
+}
+
+label {
+  font-size: 1rem;
+  color: #5e3822;
+  max-width: 240px;
+  font-family: "Leckerli One", cursive;
+
+}
+
+input {
+  height: 50px;
+  width: 100%;
+  border: rgb(221, 216, 210) solid 1px;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  border: rgb(221, 216, 210) solid 1px;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #e76f51;
+}
+
+.send-button {
+  font-family: "Leckerli One", cursive;
+  background-color: #5e3822;
+  color: rgb(255, 248, 240);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.contact-links {
+  padding: 50px;
+  display: flex;
+  gap: 50px;
+}
+
+.contact-icon {
+  width: 50px;
+  cursor: pointer;
+}
+
+.cop-info {
+  text-align: center;
+  margin: 10px;
+}
+
+.cop-info p {
+  color: rgb(255, 248, 240);
+  font-size: .8rem;
+}
