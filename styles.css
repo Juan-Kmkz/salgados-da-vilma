@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
   font-family: "Poppins", sans-serif;
@@ -8,94 +8,76 @@
 }
 
 body {
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 
+/* HEADER */
 header {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   background-color: rgb(255, 248, 240);
-  /* position: fixed; */
+  flex-wrap: wrap;
 }
 
 .logomarca {
-  width: 10rem;
+  width: 8rem;
   height: auto;
-  margin: 5px;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav-item {
   background-color: #633a21;
-  padding: 5px 1.5rem;
+  padding: 0.4rem 1.2rem;
   border-radius: 2rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #834e2a;
 }
 
 nav a {
   font-family: "Leckerli One", cursive;
   text-decoration: none;
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
+/* MAIN */
 .background-img-mask {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: auto;
   background: radial-gradient(circle, rgba(255, 248, 240, 1) 0%, rgba(231, 111, 81, 1) 77%);
-  position: absolute;
   z-index: -1;
 }
 
 .background-img {
-  width: 100vw;
+  width: 100%;
   height: 100%;
-  opacity: .5;
-  position: relative;
-  z-index: -2;
+  opacity: 0.5;
+  object-fit: cover;
 }
 
 .main-content {
   width: 100%;
-  height: 57rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-info {
-  width: 100%;
-  height: 400px;
-  background-color: #5e3822;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.txt-conteiner {
-  background-color: rgb(255, 248, 240);
-  color: #5e3822;
-  max-width: 70%;
-  height: 70%;
-  font-size: 1.5rem;
-  border-radius: 30px;
-  padding: 15px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  padding: 3rem 1rem;
 }
 
 .section-home {
@@ -103,108 +85,141 @@ nav a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 h1 {
   font-family: "Leckerli One", cursive;
-  font-size: 6rem;
+  font-size: clamp(2.5rem, 6vw, 6rem);
   color: #5e3822;
 }
 
 h2 {
   text-align: center;
   color: #5e3822;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.8rem);
 }
 
+/* HOME INFO */
+.home-info {
+  width: 100%;
+  background-color: #5e3822;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.txt-conteiner {
+  background-color: rgb(255, 248, 240);
+  color: #5e3822;
+  max-width: 900px;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  border-radius: 30px;
+  padding: 2rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* CARDS */
 .container-cards {
   width: 100%;
   background-color: rgb(255, 248, 240);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 colunas iguais */
+  gap: 30px;
+  /* espaço entre os cards */
   justify-items: center;
-  padding: 50px;
+  align-items: start;
+  padding: 50px 2rem;
+  box-sizing: border-box;
 }
 
 .card {
-  background-color: #ffffff;
-  width: 400px;
-  height: 400px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 350px;
   border-radius: 30px;
-  padding: 30px 15px;
+  padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .products {
   width: 85%;
   border-radius: 30px;
+  object-fit: cover;
 }
 
 .product-name {
   font-family: "Leckerli One", cursive;
   color: #5e3822;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .product-description {
   text-align: center;
   color: #5e3822;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
+/* FOOTER */
 footer {
   background-color: #5e3822;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 100px 0 50px;
+  align-items: center;
+  padding: 80px 20px 40px;
+  gap: 2rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 15px;
   background-color: rgb(255, 248, 240);
   font-family: "Leckerli One", cursive;
+  width: 100%;
   max-width: 600px;
   border-radius: 30px;
-  padding: 30px 50px;
-  font-size: 2rem;
+  padding: 30px 40px;
   color: #5e3822;
 }
 
 label {
   font-size: 1rem;
   color: #5e3822;
-  max-width: 240px;
-  font-family: "Leckerli One", cursive;
-
+  width: 100%;
 }
 
-input {
-  height: 50px;
+input,
+textarea,
+select {
   width: 100%;
   border: rgb(221, 216, 210) solid 1px;
   border-radius: 20px;
-  padding-left: 15px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #5e3822;
 }
+
+
 
 textarea {
-  width: 100%;
-  height: 150px;
-  border: rgb(221, 216, 210) solid 1px;
-  border-radius: 20px;
-  padding-left: 15px;
+  min-height: 120px;
+  resize: vertical;
 }
 
 input:focus,
@@ -214,47 +229,123 @@ select:focus {
   border: 2px solid #e76f51;
 }
 
-select {
-  height: 50px;
-  width: 100%;
-  border: rgb(221, 216, 210) solid 1px;
-  border-radius: 20px;
-  padding-left: 15px;
-  font-size: 1rem;
-  color: #5e3822;
-  font-family: "Leckerli One", cursive;
-}
-
 .send-button {
   font-family: "Leckerli One", cursive;
   background-color: #5e3822;
   color: rgb(255, 248, 240);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   border: none;
   border-radius: 20px;
-  height: 50px;
-  width: 150px;
+  padding: 12px 25px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-button:hover {
+  background-color: #834e2a;
 }
 
 .contact-links {
-  padding: 50px;
   display: flex;
-  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .contact-icon {
-  width: 50px;
+  width: 45px;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
 }
 
 .cop-info {
   text-align: center;
-  margin: 10px;
+  color: rgb(255, 248, 240);
+  font-size: 0.9rem;
 }
 
-.cop-info p {
-  color: rgb(255, 248, 240);
-  font-size: .8rem;
+
+
+
+
+
+@media (max-width: 1024px) {
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    gap: 1rem;
+  }
+
+  .txt-conteiner {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+
+  }
+
+  .logomarca {
+    width: 6rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .main-content {
+    height: 100%;
+    padding: 0px;
+  }
+
+  .container-cards {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .txt-conteiner {
+    font-size: 1rem;
+  }
+
+  .contact-links {
+    gap: 20px;
+  }
+
+  .contact-icon {
+    width: 35px;
+  }
 }
