@@ -208,9 +208,21 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
   border: 2px solid #e76f51;
+}
+
+select {
+  height: 50px;
+  width: 100%;
+  border: rgb(221, 216, 210) solid 1px;
+  border-radius: 20px;
+  padding-left: 15px;
+  font-size: 1rem;
+  color: #5e3822;
+  font-family: "Leckerli One", cursive;
 }
 
 .send-button {
